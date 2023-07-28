@@ -1,0 +1,10 @@
+<div class="video{% if class %} {{class}}{% endif %}">
+    <iframe
+        src="https://sketchfab.com/models/{{id}}/embed?camera={% if camera %}{{camera}}{% else %}0{% endif %}"
+        allow="autoplay; fullscreen"
+        frameborder="0" 
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen>
+    </iframe>
+</div>
