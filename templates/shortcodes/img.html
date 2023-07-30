@@ -4,7 +4,7 @@
 {% set container_width = 16 * 42 %}
 
 {# figure_width = container_width - (figure margin_blocks) #}
-{% set figure_width = container_width - (40 * 2) %}
+{% set figure_width = container_width - (0 * 2) %}
 
 {% if path is starting_with("./") %}
     {% set relative_path = page.relative_path | split(pat="/") | slice(end=-1) | join(sep="/") %}
