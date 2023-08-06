@@ -5,6 +5,11 @@
 
 {% block content %}
 <main id="main" tabindex="-1">
+{% if section.extra.hide_project_categories %}
+    {% for page in section.pages %}
+        {{ page_macros::project_listing(page=page) }}
+    {% endfor %}
+{% else %}
     {% set project_categories = load_data(path="content/projects/categories." ~ lang ~ ".json", required=false) %}
     {% if not project_categories %}
         {% set project_categories = load_data(path="content/projects/categories.json") %}
@@ -25,6 +30,7 @@
             {{ page_macros::project_listing(page=page) }}
         {% endif %}
     {% endfor %}
+{% endif %}
 
 </main>
 {% endblock content %}
