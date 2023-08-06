@@ -24,6 +24,20 @@
     </div>
 {% endmacro page_info %}
 
+{% macro page_thumbnail(page) %}
+    {% if page.extra.thumbnail %}
+        {% set thumbnail_image = resize_image(path=page.extra.thumbnail, width=config.extra.thumbnail.width, height=config.extra.thumbnail.height, op=config.extra.thumbnail.op, quality=config.extra.thumbnail.quality) %}
+        {% if page.extra.thumbnail_alt %}
+            {% set thumbnail_alt = page.extra.thumbnail_alt %}
+        {% elif page.summary %}
+            {% set thumbnail_alt = page.title ~ ": " ~ page.summary | striptags | trim %}
+        {% else %}
+            {% set thumbnail_alt = page.title %}
+        {% endif %}
+        <img src="{{ thumbnail_image.url | safe }}" alt="{{ thumbnail_alt | safe }}" title="{{ thumbnail_alt | safe }}"/>
+    {% endif %}
+{% endmacro page_thumbnail %}
+
 {% macro page_listing(page) %}
     <article class="post-list">
         <a href="{{ page.permalink | safe }}">
@@ -32,6 +46,8 @@
                     {{ page.title }}
                 </h3>
             </header>
+
+            {{ self::page_thumbnail(page=page) }}
 
             {% if page.summary %}
             <div class="content post-summary">
@@ -72,6 +88,8 @@
                 {{ page.title }}
             </h3>
         </header>
+
+        {{ self::page_thumbnail(page=page) }}
 
         {% if page.summary %}
         <div class="content post-summary">
