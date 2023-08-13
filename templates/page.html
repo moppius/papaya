@@ -34,6 +34,11 @@
     {% if page.summary %}
     <meta property="og:description" content="{{ page.summary | striptags }}">
     {% endif %}
+    {% if page.extra.scripts %}
+    {% for script in page.extra.scripts %}
+    <script src="{{ get_url(path=script) | safe }}" type="text/javascript"></script>
+    {% endfor %}
+    {% endif %}
 {% endblock %}
 
 {% block content %}
