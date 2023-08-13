@@ -464,6 +464,17 @@ figcaption {
     }
 }
 
+video,
+div.video {
+    margin-block-start: 0.75em;
+    margin-block-end: 1.25em;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
 /* 16:9 Video */
 div.video {
     position: relative;

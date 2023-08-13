@@ -1,0 +1,5 @@
+{# {{ video(video="", width=1280, height=720, poster="", class="") }} #}
+<video class="video{% if class %} {{class}}{% endif %}" width="{{width}}" height="{{height}}" poster="{{poster}}" preload loop controls>
+	<source src="{{video}}" type="video/mp4">
+	Your browser does not support the HTML5 video tag. Consider upgrading!
+</video>
