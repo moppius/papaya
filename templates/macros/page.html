@@ -2,8 +2,8 @@
 {% macro page_info(page) %}
     <div class="article-info">
         {% if page.date %}
-        {% set reading_time = "◦ " ~ page.reading_time ~ " " ~ trans(key="minute", lang=lang) %}
-        <div class="article-date">{{ page.date | date(format=trans(key="date_format", lang=lang)) }} {{ reading_time }} ◦ </div>
+        {% set reading_time = "&nbsp;• &nbsp;" ~ page.reading_time ~ " " ~ trans(key="minute", lang=lang) %}
+        <div class="article-date">{{ page.date | date(format=trans(key="date_format", lang=lang)) }} {{ reading_time | safe }} &nbsp;• &nbsp;</div>
         {% endif %}
         <div class="article-taxonomies">
             {% if page.taxonomies.categories %}
@@ -116,6 +116,7 @@
         </ul>
         {% endif %}
         {% if page.taxonomies.tags %}
+        &nbsp;•&nbsp;
         <ul class="article-tags">
             {% for tag in page.taxonomies.tags %}
             <li><a href="{{ get_taxonomy_url(kind="tags", name=tag, lang=lang) | safe }}">#{{ tag }}</a></li>
@@ -125,7 +126,7 @@
     </div>
     {% if get_env(name=config.extra.env, default="stage") == "prod" and page.extra.repo_path %}
     {% set response = load_data(url="https://api.github.com/repos/" ~ page.extra.repo_path, format="json") %}
-    <div class="article-github"> ◦
+    <div class="article-github"> •
         <a href="{{ "https://www.github.com/" ~ page.extra.repo_path }}">
         <span class="icon is-large">
           <i class="fa fas fa-star"></i>
