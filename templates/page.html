@@ -39,6 +39,8 @@
     {% endif %}
     {% if page.summary %}
     <meta property="og:description" content="{{ page.summary | striptags }}">
+    {% else %}
+    <meta property="og:description" content="{{ config.description }}">
     {% endif %}
     {% if page.extra.scripts %}
     {% for script in page.extra.scripts %}
