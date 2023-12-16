@@ -75,15 +75,26 @@ main {
 /* Headers */
 h1 {
     font-size: 1.35em;
+    margin-block-start: 1.5em;
+    margin-block-end: 0.2em;
 }
 
 h2 {
     font-weight: normal;
     font-size: 1.2em;
+    margin-block-start: 1.1em;
+    margin-block-end: 0.1em;
 }
 
 h3 {
     font-size: 1em;
+    margin-block-start: 1em;
+    margin-block-end: 0;
+}
+
+div.content ul {
+    margin-block-start: 0.5em;
+    margin-block-end: 0.8em;
 }
 
 /* Links */
@@ -256,10 +267,6 @@ article {
     padding-bottom: 0.5em;
 }
 
-article:first-of-type header h3 {
-    margin-block-start: 0.5em;
-}
-
 article header h1 {
     font-size: 1.35em;
     line-height: 1.1em;
@@ -417,8 +424,14 @@ figcaption {
         color: var(--text-color);
         text-decoration: none;
 
+        .article-date,
         .article-taxonomies {
             color: var(--text-accent-color);
+        }
+
+        .article-date {
+            font-size: 0.75em;
+            margin-block-start: 0.7em;
         }
     }
 
@@ -447,7 +460,7 @@ figcaption {
     }
 
     img {
-        margin: .5em auto 0;
+        margin: .25em auto;
     }
 
     h3 {
