@@ -32,8 +32,7 @@
     {% endif %}
     {% endif %}
     {% if page.extra.thumbnail %}
-    {% set thumbnail_image = resize_image(path=page.extra.thumbnail, width=config.extra.thumbnail.width, height=config.extra.thumbnail.height, op=config.extra.thumbnail.op, quality=config.extra.thumbnail.quality) %}
-    <meta property="og:image" content="{{ thumbnail_image.url | safe }}">
+    <meta property="og:image" content="{{ get_url(path=page.extra.thumbnail) | safe }}">
     {% if page.extra.thumbnail_alt %}
     <meta property="og:image:alt" content="{{ page.extra.thumbnail_alt }}">
     {% endif %}
