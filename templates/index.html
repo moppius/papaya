@@ -1,6 +1,15 @@
 {% import "macros/page.html" as page_macros %}
 {% extends "base.html" %}
 
+{% block ogp_head %}
+    <meta property="og:title" content="{{ config.title }}">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="{{ config.description }}">
+    <meta property="og:locale" content="{{ config.extra.ogp.locale }}">
+    <meta property="og:url" content="{{ get_url(path='') | safe }}">
+    <meta property="og:image" content="{{ get_url(path="/about/me.jpg") | safe }}">
+{% endblock %}
+
 {% block content %}
 <main id="main" class="index" tabindex="-1">
     <section class="index-columns">
