@@ -4,6 +4,7 @@
 {% block title %}{{ trans(key="category", lang=lang) }}: {{ term.name }} - {{ config.title }}{% endblock title %}
 
 {% block content %}
+<article class="post">
 <h1>{{ trans(key="category", lang=lang) }}: {{ term.name }}</h1>
 <div class="article-info">
     <a href="../">{{ trans(key="to_all_categories", lang=lang) }}</a>
@@ -12,5 +13,5 @@
 {% for page in term.pages %}
 {{ page_macros::page_listing(page=page) }}
 {% endfor %}
-
+</article>
 {% endblock content %}

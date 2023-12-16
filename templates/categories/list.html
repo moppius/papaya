@@ -4,16 +4,17 @@
 {% block title %}{{ trans(key="categories", lang=lang) }} - {{ config.title }}{% endblock title %}
 
 {% block content %}
-<h1>{{ trans(key="categories", lang=lang) }}</h1>
-
-<ul class="terms">
-    {% for term in terms %}
-    <li>
-        <a href="{{ term.permalink | safe }}">
-        {{ term.name }}
-        </a>
-        ({{ term.pages | length }})
-    </li>
-    {% endfor %}
-</ul>
+<article class="post">
+    <h1>{{ trans(key="categories", lang=lang) }}</h1>
+    <ul class="terms">
+        {% for term in terms %}
+        <li>
+            <a href="{{ term.permalink | safe }}">
+                {{ term.name }}
+            </a>
+            ({{ term.pages | length }})
+        </li>
+        {% endfor %}
+    </ul>
+</article>
 {% endblock content %}
