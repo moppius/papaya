@@ -4,7 +4,7 @@
 {% block title %}{{ trans(key="blog", lang=lang) }} - {{ config.title }}{% endblock title %}
 
 {% block ogp_head %}
-    <meta property="og:title" content="Blog - {{ config.title }}">
+    <meta property="og:title" content="{{ trans(key="blog", lang=lang) }} - {{ config.title }}">
     <meta property="og:type" content="website">
     <meta property="og:description" content="Things that I've been writing about">
     <meta property="og:locale" content="{{ config.extra.ogp.locale }}">
