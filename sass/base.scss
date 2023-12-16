@@ -575,19 +575,17 @@ footer {
 
 /* Media Queries */
 @media (max-width: 840px) {
-    .container {
-        max-width: 90%;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 840px) {
     .main-wrapper {
         margin: 0;
         max-width: none;
         overflow-x: hidden;
         padding-left: 25px;
         padding-right: 25px;
+    }
+
+    .container {
+        max-width: 90%;
+        margin: 0 auto;
     }
 
     .pagination-item {
