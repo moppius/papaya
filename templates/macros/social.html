@@ -18,6 +18,14 @@
   </a>
   {% endif %}
 
+  {% if social_config.instagram %}
+  <a href="https://www.instagram.com/{{ social_config.instagram }}" aria-label="Open {{ social_config.instagram }} Instagram" target="_blank">
+    <span class="icon is-large">
+      <i class="fab fa-instagram fa-lg" aria-hidden="true" title="Instagram"></i>
+    </span>
+  </a>
+  {% endif %}
+
   {% if social_config.linkedin %}
   <a href="https://www.linkedin.com/in/{{ social_config.linkedin }}" aria-label="Open {{ social_config.linkedin }} LinkedIn" target="_blank">
     <span class="icon is-large">
