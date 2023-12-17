@@ -4,7 +4,7 @@
 {% block title %}{{ trans(key="categories", lang=lang) }} - {{ config.title }}{% endblock title %}
 
 {% block content %}
-<article class="post">
+<main id="main" tabindex="-1">
     <h1>{{ trans(key="categories", lang=lang) }}</h1>
     <ul class="terms">
         {% for term in terms %}
@@ -16,5 +16,5 @@
         </li>
         {% endfor %}
     </ul>
-</article>
+</main>
 {% endblock content %}
