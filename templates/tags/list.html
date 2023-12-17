@@ -5,7 +5,9 @@
 
 {% block content %}
 <article class="post">
-    <h1>{{ trans(key="tags", lang=lang) }}</h1>
+    <header>
+        <h1>{{ trans(key="tags", lang=lang) }}</h1>
+    </header>
     <ul class="terms">
         {% for term in terms %}
         <li>
