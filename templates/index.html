@@ -14,7 +14,7 @@
 <main id="main" class="index" tabindex="-1">
     <section class="index-columns">
     {% for subsec in config.extra.menu_items | filter(attribute="show_recent", value=true) %}
-        <section class="index-listing">
+        <section class="index-listing {{subsec.name}}">
             <h2>
                 {{ trans(key=subsec.recent_trans_key, lang=lang) }}
             </h2>
