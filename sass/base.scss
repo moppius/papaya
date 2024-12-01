@@ -662,11 +662,17 @@ footer {
 h1, h2, h3, h4, h5, h6  {
   .zola-anchor {
     all: initial;
+    display: inline-block;
+    padding: .2em .5em .5em .5em;
+    vertical-align: middle;
     visibility: hidden;
   }
 
   &:hover .zola-anchor {
     all: initial;
+    display: inline-block;
+    padding: .2em .5em .5em .5em;
+    vertical-align: middle;
     cursor: pointer;
     visibility: visible;
   }
@@ -674,7 +680,7 @@ h1, h2, h3, h4, h5, h6  {
   .zola-anchor-link {
     vertical-align: middle;
     display: inline-block;
-    fill: var(--text-color);
+    fill: var(--link-color);
   }
 }
 
