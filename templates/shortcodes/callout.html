@@ -1,0 +1,13 @@
+{# {{ callout(type="info", title="Note", content="Message to display here") }} #}
+
+{% if type == "warning" %}
+	{% set icon="⚠️" %}
+{% elif type == "tip" %}
+	{% set icon="✅" %}
+{% else %}
+	{% set icon="ℹ️" %}
+{% endif %}
+<div class="callout callout-{{type}}">
+	<p class="callout-title" dir="auto">{{icon}} {{title}}</p>
+	<p class="callout-body">{{ body | markdown(inline=true) | safe }}
+</div>

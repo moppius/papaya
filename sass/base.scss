@@ -686,3 +686,40 @@ p > code {
   background-color: var(--code-background);
   border-radius: 6px;
 }
+
+/* Callouts */
+.callout {
+    padding: 0.5em;
+    margin-bottom: 1em;
+    color: inherit;
+    border-left: 0.25em solid var(--border-color);
+}
+
+.callout p {
+    font-size: 0.9rem;
+    margin: 0.2em;
+}
+
+.callout p.callout-title {
+    font-weight: 500;
+    margin: 0;
+}
+
+.callout p.callout-body {
+    margin: 0.2em;
+}
+
+.callout.callout-info {
+    border-left-color: rgb(30, 150, 255);
+    background-color: rgba(30, 150, 255, 0.1);
+}
+
+.callout.callout-tip {
+    border-left-color: rgb(60, 200, 80);
+    background-color: rgba(60, 200, 80, 0.1);
+}
+
+.callout.callout-warning {
+    border-left-color: rgb(255, 200, 30);
+    background-color: rgba(255, 200, 30, 0.1);
+}
