@@ -88,6 +88,16 @@
         {{ page_macros::page_info(page=page) }}
     {% endif %}
     {% block page_contents %}
+    {% if page.toc and page.extra.show_toc %}
+    <div class="article-toc">
+        <h1>Contents</h1>
+        <ul>
+        {% for h1 in page.toc %}
+            <li><a href="{{ h1.permalink | safe }}">{{ h1.title }}</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
     <div class="content">
         {{ page_contents | safe }}
     </div>
