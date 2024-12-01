@@ -74,16 +74,16 @@ main {
 
 /* Headers */
 h1 {
-    font-size: 1.35em;
-    margin-block-start: 1.5em;
-    margin-block-end: 0.2em;
+    font-size: 1.5em;
+    margin-block-start: 2.4em;
+    margin-block-end: 0.8em;
 }
 
 h2 {
     font-weight: normal;
-    font-size: 1.2em;
-    margin-block-start: 1.1em;
-    margin-block-end: 0.1em;
+    font-size: 1.4em;
+    margin-block-start: 1.6em;
+    margin-block-end: 0.4em;
 }
 
 h3 {
@@ -173,8 +173,17 @@ blockquote {
 }
 
 p {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 0.4em;
+    margin-bottom: 0.8em;
+}
+
+div.content li p {
+    margin-top: 0.2em;
+    margin-bottom: 0.4em;
+}
+
+div.content li ul {
+    margin-top: 0em;
 }
 
 hr {
@@ -194,8 +203,8 @@ header {
     justify-content: space-between;
 
     h1 {
-        font-size: 1em;
-        font-weight: normal;
+        font-size: 1.5em;
+        font-weight: bold;
         display: inline-block;
     }
 
@@ -207,7 +216,7 @@ header {
     }
 
     nav {
-        margin-top: 1em;
+        margin-top: 1.3em;
         max-width: 100%;
         text-align: right;
         margin-bottom: 1em;
@@ -243,7 +252,7 @@ h1, h2, h3, h4, h5, h6  {
 }
 
 .site-header {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: bolder;
     margin-block-start: 1em;
     white-space: nowrap;
@@ -269,10 +278,9 @@ article {
 
 article header h1 {
     margin-top: 1em;
-    font-size: 1.35em;
+    font-size: 1.5em;
     line-height: 1.1em;
     margin-bottom: 0.5em;
-    font-weight: 600;
 
     a {
         border: none;
@@ -345,6 +353,11 @@ article header h2 {
 
 article .content:not(.post-summary) {
     margin-block-start: 1em;
+}
+
+article .content h1 {
+    border-top: 1px dotted var(--border-color);
+    padding-top: .8em;
 }
 
 /* Images */
