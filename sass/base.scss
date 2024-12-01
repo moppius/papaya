@@ -38,6 +38,11 @@ figure {
     margin-inline-end: 0;
 }
 
+figure + figure {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
 .container {
     max-width: 48em;
     margin: 2em auto 0;
